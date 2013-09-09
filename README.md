@@ -22,12 +22,14 @@ Prerequisites:
 
 Firefox
 jre
+sqlite
+python
 
 To Run test:
 
 Selenium/seleniumStart 
 
-Then on a separate terminal: python zipcarWithChecking.py
+Then on a separate terminal: cd zip and then python zipcarWithChecking.py
 Test opens firefox and directos to the website.
 The terminal shows the elements searched.
 
