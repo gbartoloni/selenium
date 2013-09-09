@@ -18,7 +18,7 @@ class Menues1(unittest.TestCase):
         driver.get(self.base_url )
 	try: re.match("Car Sharing.*",driver.title)
         except AssertionError as e: self.verificationErrors.append(str(e))
-	#Here we click on the "how it works" tab then retrieve from the DB the ids to be matched"
+	#Here we click on the "is zipcar for me" tab then retrieve from the DB the ids to be matched"
         self.matchElements("is zipcar for me?")
     
     def matchElements(self,w):
