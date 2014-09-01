@@ -33,7 +33,7 @@ class Menues1(unittest.TestCase):
             cur.execute("SELECT element FROM elements where window=:win", {"win" : w})
             rows = cur.fetchall()
             for element in rows:
-		print "found element in DB:" + element[0] + " now finding it in page '" + w + "'"
+		      print "found element in DB:" + element[0] + " now finding it in page '" + w + "'"
 	        try: cmpDriver.find_element_by_id(element[0])
         	except NoSuchElementException, e: return False
         	except: raise 

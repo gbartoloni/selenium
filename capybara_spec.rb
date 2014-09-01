@@ -12,7 +12,7 @@ require 'ruby-progressbar'
 require 'nokogiri'
 require 'active_support/core_ext'
 
-require_relative "../spec_helpers/spec_helper"
+#require_relative "../spec_helpers/spec_helper"
 
 
 describe "capybara native on Stackoverflow" do
@@ -31,12 +31,12 @@ describe "capybara native on Stackoverflow" do
 
     it "Shows Newst items in questions" do
         Capybara.click_link('nav-questions')
-        Capybara.page.should have_content('newest')
+        expect(Capybara.page).to have_content('newest')
     end
     it "Returns correct search items" do
         Capybara.fill_in 'search', with: 'Windows'
         Capybara.find('input').native.send_keys(:return)
-        Capybara.page.should have_content('Windows')
+        expect(Capybara.page).to have_content('Windows')
     end
     it "sign up a new user" do
         Capybara.click_link('sign up')
