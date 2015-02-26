@@ -20,12 +20,12 @@ describe "capybara native on Stackoverflow" do
         Capybara.register_driver :selenium do |app|
             client = Selenium::WebDriver::Remote::Http::Default.new
             client.timeout =  30
-            Capybara::Selenium::Driver.new(app, :browser => :firefox, :http_client => client)
+            Capybara::Selenium::Driver.new(app, :browser => :chrome, :http_client => client)
         end
         Capybara.default_driver = :selenium
         Capybara.current_session.driver.reset!
         Capybara.reset_sessions!
-        Capybara.current_session.driver.browser.manage.window.resize_to(1000, 400)
+        Capybara.current_session.driver.browser.manage.window.resize_to(500, 200)
         Capybara.visit("http://stackoverflow.com/")
     end
 

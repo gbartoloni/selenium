@@ -33,7 +33,7 @@ describe "capybara native on yahoo search" do
         Capybara.visit("https://yahoo.com")
     end
 
-    it "MOvie Search With Harrison Ford Returns Indiana Jones" do
+    it "Movie Search With Harrison Ford Returns Indiana Jones" do
         Capybara.has_css?('i#nav-movie')
         Capybara.find('i#nav-movie').click  
         expect(Capybara.page).to have_content('Yahoo Movies')    

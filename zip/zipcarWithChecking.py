@@ -34,9 +34,9 @@ class Menues1(unittest.TestCase):
             rows = cur.fetchall()
             for element in rows:
 		      print "found element in DB:" + element[0] + " now finding it in page '" + w + "'"
-	        try: cmpDriver.find_element_by_id(element[0])
-        	except NoSuchElementException, e: return False
-        	except: raise 
+	        # try: cmpDriver.find_element_by_id(element[0])
+        	# except NoSuchElementException, e: return False
+        	# except: raise 
 
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
