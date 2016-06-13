@@ -24,6 +24,6 @@ catalog_file_hashes
 <option value="zc_cache::memoize">zc_cache::memoize</option>
 
 
-user_1 = Capybara::Session.new(:selenium) # or whatever driver
+user_1 = Capybara::Session.new(:selenium) 
 user_1.driver.browser.manage.window.resize_to(1000, 400)
-user_1.visit 'http://qaweb3.zipcar.com/admin/cache'
+user_1.visit 'http://mysite.com/admin/cache'
