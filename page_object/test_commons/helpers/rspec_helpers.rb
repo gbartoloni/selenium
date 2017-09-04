@@ -1,0 +1,7 @@
+require 'rubygems'
+require 'rspec'
+require 'capybara'
+require 'capybara/dsl'
+require 'capybara/rspec'
+require 'capybara/rspec/matchers'
+require 'selenium-webdriver'
