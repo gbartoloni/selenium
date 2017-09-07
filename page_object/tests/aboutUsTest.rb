@@ -4,9 +4,8 @@ describe 'Main Page navigation' do
     before :all do
         @home = Pages::Login.new
         @home.load
-        @home.has_about_us_link
     end
     it 'When user select About us it shows about us page' do
-
+        @home.wait_until_about_us_link_visible
     end
 end
