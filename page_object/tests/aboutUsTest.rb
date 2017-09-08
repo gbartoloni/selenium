@@ -7,5 +7,6 @@ describe 'Main Page navigation' do
     end
     it 'When user select About us it shows about us page' do
         @home.wait_until_about_us_link_visible
+        @about_us_page = @home.about_us_link.click
     end
 end
