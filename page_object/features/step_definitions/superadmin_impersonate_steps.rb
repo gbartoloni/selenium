@@ -6,7 +6,8 @@ Given(/^I log in as Superadmin$/) do
     @login_page = Pages::Login.new
     @login_page.load
     # binding.pry
-    @login_page.visit("http://cadillac:jordan@portal.integration.ampion.net")
+    @login_page.visit("http://localhost:3000/users/sign_in#/")
+    # @login_page.visit("http://user:pass@portal.integration.ampion.net")
     @login_page.wait_until_login_button_visible
     @login_page.login_as('sue@example.net', 'Mypassword123','superadmin')
     @superadmin_landing_page=Pages::SuperAdmin::Landing.new
