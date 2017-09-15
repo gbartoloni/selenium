@@ -1,8 +1,10 @@
 require 'site_prism'
 module Pages
     class Login <SitePrism::Page
-        set_url "https://portal.integration.ampion.net/users/sign_in#/"
-        # set_url "http://localhost:3000/users/sign_in#/"
+        # @login_page.visit("http://user@pass.integration.ampion.net")
+        # set_url "https://portal.integration.ampion.net/users/sign_in#/"
+        set_url "http://localhost:3000/users/sign_in#/"
+        
         element :login_button, 'input[type="submit"]'
         element :user_email_field, 'input#user_email'
         element :user_password_field, 'input#user_password'

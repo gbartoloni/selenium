@@ -8,6 +8,13 @@ require 'selenium-webdriver'
 require 'pry'
 require 'pry-nav'
 
+def user_login(email, password,user_type)
+    @login_page = Pages::Login.new
+    @login_page.load
+    @login_page.wait_until_login_button_visible
+    @login_page.login_as(email, password,user_type)
+end
+
 Capybara.register_driver :selenium do |app|
     client = Selenium::WebDriver::Remote::Http::Default.new
     client.timeout =  30
